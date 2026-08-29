@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+</head>
+
+<body>
+    <div class="father">
+        <header class="header-bar">
+            <input type="color" id="seed-color">
+            <select id="color-mode">
+                <option value="monochrome">Monochrome</option>
+                <option value="monochrome-dark">Monochrome-dark</option>
+                <option value="monochrome-light">Monochrome-light</option>
+                <option value="analogic">Analogic</option>
+                <option value="complement">Complement</option>
+                <option value="analogic-complement">Analogic complement</option>
+                <option value="triad">Triad</option>
+            </select>
+            <button id="get-btn">Get color Scheme</button>
+        </header>
+
+        <main>
+            <div class="color-grid">
+
+                <div class="color-item"
+                    <div class="swatch" style="background-color: #f5f05a;"></div>
+                    <p class="hex">#f5f05a</p>
+                </div>
+
+                <div class="color-item"
+                    <div class="swatch" style="background-color: #f55a93;"></div>
+                    <p class="hex">#f55a93</p>
+                </div>
+
+                <div class="color-item"
+                    <div class="swatch" style="background-color: #49ae32;"></div>
+                    <p class="hex">#49ae32</p>
+                </div>
+
+                <div class="color-item"
+                    <div class="swatch" style="background-color: #35c0be;"></div>
+                    <p class="hex">#35c0be</p>
+                </div>
+
+                <div class="color-item"
+                    <div class="swatch" style="background-color: #3f2a2a;"></div>
+                    <p class="hex">#3f2a2a</p>
+                </div>
+
+            </div>
+            
+        </main>
+
+
+    </div>
+<script src="script.js" type="module"></script>
+</body>
+
+</html>

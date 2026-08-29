@@ -1,0 +1,120 @@
+
+body{
+    background-color: beige;
+}
+
+.father{
+    width: 550px;
+    height: 550px;
+    background-color: aliceblue;
+}
+
+.header-bar{
+    background-color: aqua;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+#seed-color{
+width: 61px;
+height: 42px;
+margin-left: 19px;
+border: 0.5px solid #D1D5DB;
+cursor: pointer;
+padding: 0px;
+border-radius: 5px;
+}
+
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    background-color: #E5E5E5;
+    padding: 5px;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: 0.5px solid #313131;
+   
+}
+
+#color-mode{
+    width: 312px;
+    height: 42px;
+    border: 1px solid #D1D5DB;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+select,::picker(select) {
+  appearance: base-select;
+  background: white;
+  font-family: "Inter";
+}
+
+::picker(select){
+
+    margin-top: 4px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    padding: 0.25rem;
+    padding-left: 13px;
+}
+
+/* options inside */
+
+option{
+    margin-left: -5px;
+}
+
+option:not(:last-child){
+    margin-bottom: 16px;
+    
+}
+
+option:last-child{
+margin-bottom: 11px;
+}
+
+option:first-child{
+    margin-top: 8px ;
+}
+
+/* checkmark */
+option::checkmark{
+    content: checkmark;
+    order: 1;
+    margin-left: auto;
+    align-self: center;
+     content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none'><path d='M4 12L9.5 17.5L20 6' stroke='%233B82F6' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+}
+
+/* change color options highlighted text */
+option:hover{
+    background-color: rgb(247, 247, 247);
+}
+
+/* bold current selected mode in option */
+option:checked{
+    font-weight: 600;
+}
+
+/* the arrow */
+
+::picker-icon{
+    
+}
+
+
+
+
+
+
+
+
+
