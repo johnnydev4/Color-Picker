@@ -2,10 +2,9 @@
 
 A responsive color scheme generator built with HTML, CSS, and vanilla JavaScript — my Scrimba solo project, powered by [The Color API](https://www.thecolorapi.com/).
 
-
+## Live demo
 
 🔗 Live demo: https://johnnydev4.github.io/Color-Picker/
-
 
 
 ## About
