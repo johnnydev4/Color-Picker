@@ -5,8 +5,10 @@ A responsive color scheme generator built with HTML, CSS, and vanilla JavaScript
 ![Color Picker screenshot](./images/screenshot.png)
 <!-- Reemplazá con tu propio screenshot; subilo a la carpeta images/ -->
 
-🔗 **Live demo:** [https://johnnydev4.github.io/Color-Picker/](#)
-<!-- Si lo publicás con GitHub Pages, pegá el link acá -->
+🔗 **Live demo:** (https://johnnydev4.github.io/Color-Picker/)
+
+
+
 
 ## About
 
