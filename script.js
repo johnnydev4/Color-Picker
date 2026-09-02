@@ -1,8 +1,8 @@
 
 
-function render(input, mode){
+function render(input, mode, amount){
 
-fetch (`https://www.thecolorapi.com/scheme?hex=${input}&mode=${mode}&count=5`, {
+fetch (`https://www.thecolorapi.com/scheme?hex=${input}&mode=${mode}&count=${amount}`, {
 method: "GET"
 })
 
@@ -25,14 +25,44 @@ method: "GET"
 
 }
 
-document.getElementById("get-btn").addEventListener("click", function(event){
+// render color button
 
-    // poner un if statement para los casos de triadas etc
-const currentColor = document.getElementById("seed-color").value.replace("#", "")
-const currentMode = document.getElementById("color-mode").value.toLowerCase()
-render(currentColor, currentMode)
+document.getElementById("get-btn").addEventListener("click", function(event){
+    const mode = document.getElementById("color-mode").value
+
+    if (mode === "analogic" || mode === "triad"){
+    
+        const currentColor = document.getElementById("seed-color").value.replace("#", "")
+        const currentMode = document.getElementById("color-mode").value.toLowerCase()
+        const colorAmount = "3"
+        render(currentColor, currentMode, colorAmount)
+
+    } else {
+            
+            const currentColor = document.getElementById("seed-color").value.replace("#", "")
+            const currentMode = document.getElementById("color-mode").value.toLowerCase()
+            const colorAmount = "5"
+            render(currentColor, currentMode, colorAmount)
+
+    }
 
 })
 
+// copy hex when click
+
+document.addEventListener("click", function(e){
+    console.log("click en:", e.target)
+    if (e.target.classList.contains("hex")){
+        navigator.clipboard.writeText(e.target.textContent)
+        e.target.textContent = "Copiado!"
+        setTimeout(function(){
+            e.target.textContent = e.target.textContent   // necesitarías guardar el hex original antes de sobreescribirlo
+        }, 1000)
+    } else if (e.target.classList.contains("swatch")){
+        navigator.clipboard.writeText(e.target.style="background-color".value)
+
+
+    }
+})
 
 
