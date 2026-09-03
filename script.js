@@ -21,6 +21,11 @@ method: "GET"
 
     document.querySelector(".color-grid").innerHTML = html
     
+// gradiente dinámico en el body
+    const secondColor = document.getElementById("seed-color").value
+    const firstColor = data.colors[1].hex.value
+    document.body.style.background = `linear-gradient(90deg, ${firstColor}, ${secondColor})`
+    
 })
 
 }
@@ -54,15 +59,20 @@ document.addEventListener("click", function(e){
     console.log("click en:", e.target)
     if (e.target.classList.contains("hex")){
         navigator.clipboard.writeText(e.target.textContent)
-        e.target.textContent = "Copiado!"
+        const savedHex = e.target.textContent
+        e.target.textContent = "Copied!"
         setTimeout(function(){
-            e.target.textContent = e.target.textContent   // necesitarías guardar el hex original antes de sobreescribirlo
+            e.target.textContent = savedHex 
         }, 1000)
-    } else if (e.target.classList.contains("swatch")){
-        navigator.clipboard.writeText(e.target.style="background-color".value)
-
-
+    } else if (e.target.closest(".color-item")){
+        let savedHex = e.target.closest(".color-item").querySelector(".hex").textContent
+        navigator.clipboard.writeText(savedHex)
+        e.target.closest(".color-item").querySelector(".hex").textContent = "Copied!"
+        setTimeout(function(){
+            e.target.closest(".color-item").querySelector(".hex").textContent = savedHex
+        }, 1000)
     }
-})
+    }
+)
 
 

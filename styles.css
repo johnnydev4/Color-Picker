@@ -1,6 +1,10 @@
 
 body{
-    background-color: beige;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    background: linear-gradient(90deg, #4059ff, #ff6b6b)
     
 }
 
@@ -8,6 +12,8 @@ body{
     width: 550px;
     height: 550px;
     background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 8 0px 11px rgba(0, 0, 0, 0.12);
 }
 
 .header-bar{
@@ -16,7 +22,7 @@ body{
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-     box-shadow: 4 0px 11px rgba(0, 0, 0, 0.12);
+    box-shadow: 4 0px 11px rgba(0, 0, 0, 0.12);
 }
 
 #seed-color{
